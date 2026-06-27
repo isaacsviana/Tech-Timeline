@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tech Timeline</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Canvas de partículas -->
+  <canvas id="particulas"></canvas>
+
+  <!-- Barra de progresso -->
+  <div id="barra-progresso">
+    <div id="progresso-fill"></div>
+    <span id="progresso-texto">0%</span>
+  </div>
+
+  <!-- Cabeçalho -->
+  <header id="cabecalho">
+    <div class="logo">
+      <span class="logo-icone">◈</span>
+      <h1>Tech<span>Timeline</span></h1>
+    </div>
+    <p class="subtitulo">A história da tecnologia de 1970 até hoje</p>
+  </header>
+
+  <!-- Botões de navegação -->
+  <button class="nav-btn" id="btn-esquerda" aria-label="Anterior">&#8249;</button>
+  <button class="nav-btn" id="btn-direita" aria-label="Próximo">&#8250;</button>
+
+  <!-- Container principal da timeline -->
+  <main id="timeline-wrapper">
+    <div id="timeline-container">
+      <div id="linha-central"></div>
+      <div id="eventos-container"></div>
+    </div>
+  </main>
+
+  <!-- Mini-mapa -->
+  <nav id="minimapa" aria-label="Navegação rápida por ano">
+    <div id="minimapa-pontos"></div>
+    <div id="minimapa-barra"><div id="minimapa-barra-fill"></div></div>
+  </nav>
+
+  <!-- Modal -->
+  <div id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+    <div id="modal">
+      <button id="modal-fechar" aria-label="Fechar">&times;</button>
+      <div id="modal-imagem"></div>
+      <h2 id="modal-titulo"></h2>
+      <p id="modal-ano-detalhe"></p>
+      <p id="modal-descricao-longa"></p>
+      <div id="modal-curiosidade">
+        <span class="curiosidade-label">💡 Curiosidade</span>
+        <p id="modal-curiosidade-texto"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
